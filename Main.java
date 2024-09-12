@@ -87,4 +87,12 @@ public class Main {
     // 20 8 12 4 8 15 9 3 1 10 8
     //we get the same thing as the previous test but with the leftover of 3 the 8 is just ignored (kind of)
 
+    //This test is if all the items are over the capacity B
+    // 10 9 12 13 14 15 16 17 18 19 20
+    // This test show that the code put 20 19 18 in the bins and the unused space is all in the negative
+
+    // This test will show what happens if the list is to small
+    // 10 10 1 2 3 4 5 6
+    // This throws an execption
+
 }
