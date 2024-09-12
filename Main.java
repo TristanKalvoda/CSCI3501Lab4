@@ -74,4 +74,17 @@ public class Main {
         return bins;
 
     }
+    // tests
+    // 10 10 9 8 7 6 5 4 3 2 1 10
+    // This test shows that we have leftover items 7 6 5 4 3 
+    //the output of the bins are [10] [9, 1] [8, 2]
+
+    // 20 8 12 4 8 15 9 3 1 10
+    // like the example on canvas we got 
+    // [15, 4, 1] [12, 8] [10, 9] with a left over of 3
+
+    // This test is where the limit of the list is more then the capacity
+    // 20 8 12 4 8 15 9 3 1 10 8
+    //we get the same thing as the previous test but with the leftover of 3 the 8 is just ignored (kind of)
+
 }
