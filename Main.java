@@ -1,5 +1,7 @@
 import java.util.*;
 
+// Dylan Packer, Tristan Kalvoda
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -35,7 +37,8 @@ public class Main {
     public static List<List<Integer>> binApproximator(int B, int[] arr) {
         Arrays.sort(arr);
 
-        // Sort arr in decreasing order
+        // Sort arr in decreasing order. 
+        // Efficiency of O(n log n)
         Arrays.sort(arr);
         for (int i = 0; i < arr.length / 2; i++) {
             int temp = arr[i];
@@ -47,6 +50,7 @@ public class Main {
         List<Integer> unpackedItems = new ArrayList<>();
 
         // First-Fit Decreasing Algorithm
+        // Efficiency of O(n^2)
         for (int item : arr) {
             boolean placed = false;
             for (List<Integer> bin : bins) {
@@ -69,6 +73,7 @@ public class Main {
         }
 
         // Output unpacked items
+        // Efficiency of O(n)
         System.out.println("Unpacked items: " + unpackedItems);
 
         return bins;
@@ -93,6 +98,12 @@ public class Main {
 
     // This test will show what happens if the list is to small
     // 10 10 1 2 3 4 5 6
-    // This throws an execption
+    // This throws an exception
 
+
+    // The algorithm has a worst-case time complexity of (O(N^2)). 
+    // This is primarily due to the nested loops in the First-Fit Decreasing Algorithm, 
+    // where each item is checked against all bins, and the sum of items in each bin is recalculated. 
+    // The sorting step contributes (O(N \log N)), but it is dominated by the (O(N^2)) term.
+    
 }
